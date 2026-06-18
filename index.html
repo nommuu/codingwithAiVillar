@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calculator</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 100px; }
+    input, button { padding: 8px; margin: 5px; }
+  </style>
+</head>
+<body>
+
+<h2>Grade Calculator</h2>
+<input type="number" id="grade" placeholder="Enter grade">
+<button onclick="check()">Check Result</button>
+<p id="result"></p>
+
+<script>
+function check() {
+  let g = document.getElementById("grade").value;
+
+  if (g < 0 || g > 100 || g === "") {
+    result.textContent = "Enter a valid grade (0-100).";
+  } else if (g >= 75) {
+    result.textContent = "Passed";
+  } else {
+    result.textContent = "Failed";
+  }
+}
+</script>
+
+</body>
+</html>
+
